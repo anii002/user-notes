@@ -1,0 +1,164 @@
+body {
+  margin: 0 auto !important;
+}
+
+/* header */
+
+.header .main-header {
+  justify-content: space-between;
+  background-color: darkorchid;
+  margin: 0 auto;
+}
+/* header */
+
+
+
+/* form */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-section {
+  padding-top: 32px;
+  padding-bottom: 10px;
+}
+
+.forms {
+  width: 100%;
+  background: #fff;
+}
+
+.forms .form-content .title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.forms .form-content .title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #b81313;
+}
+
+.forms .signup-form .title:before {
+  width: 20px;
+}
+
+.forms .form-content .input-boxes {
+  margin-top: 30px;
+}
+
+.forms .form-content .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.form-content .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+  border-color: #b81313;
+}
+
+.form-content .input-box .icon {
+  position: absolute;
+  color: #b81313;
+  font-size: 17px;
+}
+
+.forms .form-content .text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.forms .form-content .text a {
+  text-decoration: none;
+}
+
+.forms .form-content .text a:hover {
+  text-decoration: underline;
+}
+
+.forms .form-content .button {
+  color: #fff;
+  margin-top: 25px;
+}
+
+.forms .form-content .button button {
+  color: #fff;
+  background: #b81313;
+  width: 100%;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.forms .form-content .button button:hover {
+  background: #b81313;
+}
+
+.forms .form-content label {
+  color: #b81313;
+  cursor: pointer;
+}
+
+.forms .form-content label:hover {
+  text-decoration: underline;
+}
+
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text {
+  text-align: center;
+  margin-top: 9px;
+}
+
+.container #flip {
+  display: none;
+}
+/* form */
+
+/* footer */
+.footer-main{
+  margin-top: 5%;
+}
+
+.footer {
+  background-color: black;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.footer p{
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+/* footer */
