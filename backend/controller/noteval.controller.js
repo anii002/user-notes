@@ -2,7 +2,7 @@
 const Notes = require("../models/notes.model");
 
 exports.getAll = (req, res) => {
-    Notes.find({ userId: req.user }).then((note) => {
+    Notes.find({ userId: req.user }).sort({ createdAt: -1 }).then((note) => {
         res.json(note)
     }).catch((err) => {
         console.log(err.message);

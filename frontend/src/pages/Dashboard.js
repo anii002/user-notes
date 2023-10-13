@@ -61,27 +61,27 @@ const DashBoard = () => {
                 <div className="col-lg-6">
                     <AllNotes notes={notes} setUpdateNotes={setUpdateNotes} setAddNote={setAddNote} />
                 </div>
-                <div className={`row col-lg-3  d-flex flex-wrap justify-content-between mb-5 bg-body rounded ${Object.keys(updateNotes).length > 2 && !addNote && !editNote && "shadow-lg p-2"} `}>
+                <div className={`row col-lg-3  d-flex flex-wrap justify-content-between mb-5 bg-body rounded ${Object.keys(updateNotes).length > 2 } `}>
                     {editNote && <EditNotes updateNotes={updateNotes} setUpdateNotes={setUpdateNotes} getUpdatedNotes={getUpdatedNotes} setAddNote={setAddNote} setEditNote={setEditNote} />}
                     {Object.keys(updateNotes).length > 2 && !addNote && !editNote
                         &&
                         <>
-                        <div className="d-flex justify-content-between">
-                            <div className="m-2">
-                                <h4>{updateNotes.title}</h4>
-                                <p>{updateNotes.description}</p>
+                            <div className="d-flex justify-content-between shadow-lg rounded ">
+                                <div className="mt-3">
+                                    <h4>{updateNotes.title}</h4>
+                                    <p>{updateNotes.description}</p>
 
+                                </div>
+                                <div className="mt-3">
+                                    <div><button className="btn btn-warning" onClick={() => setEditNote(true)}>edit</button></div>
+                                    <div><button className="btn btn-danger mt-3" onClick={() => deleteNotes(updateNotes._id)}>delete</button></div>
+                                </div>
                             </div>
-                            <div className="m-2">
-                                <div><button className="btn btn-warning" onClick={() => setEditNote(true)}>edit</button></div>
-                                <div><button className="btn btn-danger mt-3" onClick={() => deleteNotes(updateNotes._id)}>delete</button></div>
-                            </div>
-                        </div>
                         </>
                     }
                     {addNote &&
                         <div className="m-2">
-                            <AddNotes setAddNote={setAddNote} newNotes={(newNote) => setNotes([...notes, newNote])} />
+                            <AddNotes setAddNote={setAddNote} newNotes={(newNote) => setNotes([newNote, ...notes])} />
                         </div>
                     }
 
