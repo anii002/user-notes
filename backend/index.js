@@ -23,6 +23,12 @@ mongoose.connect(
         console.log("MongoDB connection established");
     }
 );
+if ('production' === 'production') {
+    app.use(express.static('frontend/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+    });
+}
 // set up routes
 app.use("/users", require("./routes/user"));
 app.use("/notes", require("./routes/notes"));

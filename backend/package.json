@@ -4,7 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "nodemon index",
+        "frontend": "npm start --prefix ../frontend",
+        "dev": "concurrently \"npm run start\" \"npm run frontend\""
     },
     "keywords": [],
     "author": "",
@@ -17,5 +19,7 @@
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.10.7",
         "nodemon": "^2.0.4"
-    }
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.1"    }
 }
