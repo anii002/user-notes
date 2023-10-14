@@ -1,7 +1,7 @@
 const express = require("express");
 // import express from "express";
 const mongoose = require("mongoose");
-
+const path = require("path")
 const cors = require("cors");
 require("dotenv").config();
 // set up express
