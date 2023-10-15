@@ -43,7 +43,6 @@ const DashBoard = () => {
             return item
         })
         setNotes(toUpdateNotes)
-
     }
 
     return (
@@ -61,7 +60,7 @@ const DashBoard = () => {
                 <div className="col-lg-6">
                     <AllNotes notes={notes} setUpdateNotes={setUpdateNotes} setAddNote={setAddNote} />
                 </div>
-                <div className={`row col-lg-3  d-flex flex-wrap justify-content-between mb-5 bg-body rounded ${Object.keys(updateNotes).length > 2 } `}>
+                <div className={`row col-lg-3  d-flex flex-wrap justify-content-between mb-5 bg-body rounded ${Object.keys(updateNotes).length > 2} `}>
                     {editNote && <EditNotes updateNotes={updateNotes} setUpdateNotes={setUpdateNotes} getUpdatedNotes={getUpdatedNotes} setAddNote={setAddNote} setEditNote={setEditNote} />}
                     {Object.keys(updateNotes).length > 2 && !addNote && !editNote
                         &&
@@ -84,7 +83,6 @@ const DashBoard = () => {
                             <AddNotes setAddNote={setAddNote} newNotes={(newNote) => setNotes([newNote, ...notes])} />
                         </div>
                     }
-
                 </div>
             </div>
         </div>
