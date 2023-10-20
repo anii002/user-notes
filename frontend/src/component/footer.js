@@ -1,7 +1,7 @@
 
 function Footer() {
     return (
-        <footer className="footer m-2">
+        <footer className="footer mt-5">
             <p>@copyright 2023</p>
         </footer>
     )

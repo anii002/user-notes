@@ -16,7 +16,7 @@ const Home = () => {
                     <h4 className="mt-2">Users Notes</h4>
                     <img src={notes} alt="image" className="img-fluid" />
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-3 mx-auto">
                     {page === "login" ?
                         <Login setComponent={setComponent} />
                         : <Register setComponent={setComponent} />}

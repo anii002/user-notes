@@ -23,7 +23,8 @@ mongoose.connect(
         console.log("MongoDB connection established");
     }
 );
-if ('production' === 'production') {
+if (Number(process.env.PRODUCTION)) {
+    console.log("wfee")
     app.use(express.static('../frontend/build'));
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));

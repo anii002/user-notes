@@ -16,9 +16,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path="/dashboard" element={<DashBoard />} />
       </Routes>
-      <div className="fixed-bottom">
         <Footer />
-      </div>
     </BrowserRouter>
   )
 }

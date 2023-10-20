@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-
 const Header = () => {
     const navigate = useNavigate();
     const token = localStorage.getItem("user")
@@ -16,10 +15,10 @@ const Header = () => {
 
     return (
         <>
-            <header className="header mx-2">
+            <header className="header shadow">
                 <div className="d-flex main-header">
                     <div>
-                        <h4 className="heading m-2">Notes</h4>
+                        <h4 className="heading m-2 text-white">Notes</h4>
                     </div>
                     <div>
                         {token && authUser}
@@ -27,7 +26,6 @@ const Header = () => {
                 </div>
             </header>
         </>
-
     )
 }
 
