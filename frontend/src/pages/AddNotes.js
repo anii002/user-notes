@@ -26,7 +26,7 @@ const AddNotes = ({ setAddNote, newNotes, edit }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className='shadow-lg p-3'>
+        <form onSubmit={handleSubmit}>
             <div className="mb-3">
                 <label htmlFor="title" className="form-label">Title</label>
                 <input

@@ -33,7 +33,7 @@ const Login = ({ setComponent }) => {
 
     return (
         <>
-            <section className="form-section">
+            <section className="form-section mt-2">
                 <div className="forms">
                     <div className="form-content">
                         <div className="login-form">

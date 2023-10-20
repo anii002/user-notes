@@ -10,13 +10,13 @@ const Home = () => {
         setPage(val)
     }
     return (
-        <div className="home mx-2">
-            <div className="row d-flex flex-wrap justify-content-between ">
+        <div className="home mx-2 mb-3">
+            <div className="row d-flex flex-wrap justify-content-between">
                 <div className="col-lg-6">
                     <h4 className="mt-2">Users Notes</h4>
-                    <img src={notes} alt="image" className="img-fluid" />
+                    <img src={notes} alt="image" className="img-fluid rounded-3" />
                 </div>
-                <div className="col-lg-3 mx-auto">
+                <div className="col-lg-3 mx-auto mt-5">
                     {page === "login" ?
                         <Login setComponent={setComponent} />
                         : <Register setComponent={setComponent} />}
